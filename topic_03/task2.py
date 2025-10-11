@@ -1,0 +1,21 @@
+def test_list_functions():
+    lst = [1, 2, 3]
+    print("Початковий список:", lst)
+    lst.extend([4, 5])
+    print("extend:", lst)
+    lst.append(6)
+    print("append:", lst)
+    lst.insert(2, 99)
+    print("insert(2, 99):", lst)
+    lst.remove(99)
+    print("remove(99):", lst)
+    lst.sort()
+    print("sort:", lst)
+    lst.reverse()
+    print("reverse:", lst)
+    copy_lst = lst.copy()
+    print("copy:", copy_lst)
+    lst.clear()
+    print("clear:", lst)
+
+test_list_functions()
