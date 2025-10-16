@@ -55,10 +55,13 @@ def updateElement():
         return
 
     print("Leave field empty if you don’t want to change it.")
+    new_name = input(f"Enter new name (current: {found['name']}): ")
     new_phone = input(f"Enter new phone (current: {found['phone']}): ")
     new_email = input(f"Enter new email (current: {found['email']}): ")
     new_address = input(f"Enter new address (current: {found['address']}): ")
 
+    if new_name.strip():
+        found["name"] = new_name
     if new_phone.strip():
         found["phone"] = new_phone
     if new_email.strip():
@@ -66,9 +69,9 @@ def updateElement():
     if new_address.strip():
         found["address"] = new_address
 
+    students.sort(key=lambda x: x['name'])
     print(f"Data for {name} updated successfully")
     return
-
 
 def main():
     while True:
